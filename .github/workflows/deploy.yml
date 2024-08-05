@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -10,32 +10,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Check out the repository
-    - name: Check out the repository
-      uses: actions/checkout@v3
-      with:
-        deploy_key: b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACD7sNIF08rd7qEDi1Mnt3rhlwobTN2Hnwp+wvlNTijp1AAAAJi5GrgBuRq4AQAAAAtzc2gtZWQyNTUxOQAAACD7sNIF08rd7qEDi1Mnt3rhlwobTN2Hnwp+wvlNTijp1AAAAEClvYMdTjadB2h73O5lMNgJqkMXKXds5drWAYTCPnAnR/uw0gXTyt3uoQOLUye3euGXChtM3YefCn7C+U1OKOnUAAAAFXBvdXJ5YS5saDk2QGdtYWlsLmNvbQ==
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-    # Step 2: Set up Node.js
     - name: Set up Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v2
       with:
         node-version: '20'
 
-    # Step 3: Install dependencies
     - name: Install dependencies
       run: npm install
 
-    # Step 4: Build the project
-    - name: Build the project
+    - name: Build project
       run: npm run build
 
-    # Step 5: Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        deploy_key: b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACD7sNIF08rd7qEDi1Mnt3rhlwobTN2Hnwp+wvlNTijp1AAAAJi5GrgBuRq4AQAAAAtzc2gtZWQyNTUxOQAAACD7sNIF08rd7qEDi1Mnt3rhlwobTN2Hnwp+wvlNTijp1AAAAEClvYMdTjadB2h73O5lMNgJqkMXKXds5drWAYTCPnAnR/uw0gXTyt3uoQOLUye3euGXChtM3YefCn7C+U1OKOnUAAAAFXBvdXJ5YS5saDk2QGdtYWlsLmNvbQ==
-        publish_branch: gh-pages
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
-        user_name: 'Alihosseyni96'
-        user_email: 'pourya.lh96@gmail.com'
+        destination_branch: gh-pages
