@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbabycap=self.webpackChunkbabycap||[]).push([[1903],{1912:a=>{a.exports=JSON.parse('{"blogBasePath":"/babycap/blog","blogTitle":"Blog"}')}}]);
