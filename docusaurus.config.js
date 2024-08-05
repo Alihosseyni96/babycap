@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'My Site',
-  tagline: 'FINALY I DID IT!!!!!!!!!!!!!!',
+  tagline: 'Deployed On Pages and And Workflow is Done!!!!',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
