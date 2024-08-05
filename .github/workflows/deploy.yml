@@ -14,7 +14,7 @@ jobs:
     - name: Check out the repository
       uses: actions/checkout@v3
       with:
-        ssh-private-key: b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACD7sNIF08rd7qEDi1Mnt3rhlwobTN2Hnwp+wvlNTijp1AAAAJi5GrgBuRq4AQAAAAtzc2gtZWQyNTUxOQAAACD7sNIF08rd7qEDi1Mnt3rhlwobTN2Hnwp+wvlNTijp1AAAAEClvYMdTjadB2h73O5lMNgJqkMXKXds5drWAYTCPnAnR/uw0gXTyt3uoQOLUye3euGXChtM3YefCn7C+U1OKOnUAAAAFXBvdXJ5YS5saDk2QGdtYWlsLmNvbQ==
+        deploy_key: b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACD7sNIF08rd7qEDi1Mnt3rhlwobTN2Hnwp+wvlNTijp1AAAAJi5GrgBuRq4AQAAAAtzc2gtZWQyNTUxOQAAACD7sNIF08rd7qEDi1Mnt3rhlwobTN2Hnwp+wvlNTijp1AAAAEClvYMdTjadB2h73O5lMNgJqkMXKXds5drWAYTCPnAnR/uw0gXTyt3uoQOLUye3euGXChtM3YefCn7C+U1OKOnUAAAAFXBvdXJ5YS5saDk2QGdtYWlsLmNvbQ==
 
     # Step 2: Set up Node.js
     - name: Set up Node.js
