@@ -8,7 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'This it Baby Cap!',
+  title: 'This it Baby CAPYYY!',
   tagline: 'Deployed On Pages and And Workflow is Done!!!!',
   favicon: 'img/favicon.ico',
 
